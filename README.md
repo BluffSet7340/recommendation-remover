@@ -22,4 +22,6 @@ The user watches a YouTube video and when he/she watches till the end, they come
 
 ### Lessons Learnt
 
-background script runs all the time, content script runs only on the pages whose urls are specified. The background script and the popup script exist inside of extension context, so you get access to all the browser.* api calls
+background script runs all the time, content script runs only on the pages whose urls are specified. The background script and the popup script exist inside of extension context, so you get access to all the browser.* api calls.
+
+setting browser storage is asynchronous, these have to awaited before accessing the values. Using arrow functions without the body is an implicit return. The get elements by classname gives me all the elements with said class name

@@ -1,9 +1,10 @@
 const toggleBtn = document.getElementById("toggleButton");
-let flag = false;
 
-toggleBtn.addEventListener("click", ()=>{
-    flag = !flag;
-    console.log(flag);
-    // send it to recommendation-remover script
-    
-}) 
+toggleBtn.addEventListener("click", async () => {
+  let flag = await browser.storage.sync.get("rec_switch");
+  browser.storage.sync.set({
+    rec_switch: !flag.rec_switch,
+  });
+  console.log("switch flipped to ", flag.rec_switch);
+  // send it to recommendation-remover script
+});
