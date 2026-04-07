@@ -6,5 +6,4 @@ toggleBtn.addEventListener("click", async () => {
     rec_switch: !flag.rec_switch,
   });
   console.log("switch flipped to ", flag.rec_switch);
-  // send it to recommendation-remover script
 });
