@@ -8,7 +8,6 @@ const observer = new MutationObserver(async (mutations) => {
   );
   // if it is not undefined
   if(recommendations){
-    console.log("This is from the mutation observer: ", recommendations[0]);
     if (toggle.rec_switch) {
       recommendations[0].style.display = "none";
     } else {
@@ -30,13 +29,11 @@ browser.storage.sync.onChanged.addListener(async () => {
   let recommendations = document.getElementsByClassName(
     "ytp-fullscreen-grid-stills-container",
   );
-  console.log(
-    "This is from the storage onChange listener: ",
-    recommendations[0],
-  );
-  if (toggle.rec_switch) {
-    recommendations[0].style.display = "none";
-  } else {
-    recommendations[0].style.display = "grid"; // actual display found in inspector
+  if(recommendations){
+    if (toggle.rec_switch) {
+      recommendations[0].style.display = "none";
+    } else {
+      recommendations[0].style.display = "grid"; // actual display found in inspector
+    }
   }
 });
