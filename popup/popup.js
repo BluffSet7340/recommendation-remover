@@ -5,5 +5,4 @@ toggleBtn.addEventListener("click", async () => {
   browser.storage.sync.set({
     rec_switch: !flag.rec_switch,
   });
-  console.log("switch flipped to ", flag.rec_switch);
 });

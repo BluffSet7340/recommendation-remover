@@ -32,4 +32,6 @@ I can set and reset the recommendations but I need it to listen to all youtube t
 
 The background script does not have access to the DOM but the content script has access to the DOM of the page.
 
-Mutation Observers will have to be used to detect changes in DOM on YouTube page
+Mutation Observers will have to be used to detect changes in DOM on YouTube page.
+
+The DOM event listener is not working so I removed it
