@@ -7,7 +7,7 @@
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
-      "js": ["recommendation-remover.js"]
+      "js": ["content-script/recommendation-remover.js"]
     }
   ],
   "background": {
