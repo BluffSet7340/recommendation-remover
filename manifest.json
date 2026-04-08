@@ -3,7 +3,7 @@
   "name": "Recommendation Remover",
   "version": "1.0.0",
   "description": "Remove the three recommended videos at the end of a YouTube video",
-  "permissions": ["tabs", "storage", "activeTab"],
+  "permissions": ["storage", "activeTab"],
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
